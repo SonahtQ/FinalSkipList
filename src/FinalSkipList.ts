@@ -914,7 +914,7 @@ export default class FinalSkipList<T> {
 
     //
 
-    private debugVisualization() {
+    #debugVisualization() {
         if (this.size > 9)
             throw new Error("ASCII visualization in console works only for maximum 9 of nodes.");
 

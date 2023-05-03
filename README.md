@@ -17,6 +17,16 @@ Fast & fully-featured skip list data structure for JavaScript and TypeScript, de
 npm install finalskiplist
 ```
 
+## Building & Testing
+
+```bash
+cd node_modules/finalskiplist
+npm run test
+npm run build
+```
+
+Browser ready JS file will be placed in `dist/browser/`
+
 ## Usage
 
 ### TypeScript
