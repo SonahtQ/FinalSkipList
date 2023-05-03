@@ -1,6 +1,12 @@
 {
   "name": "finalskiplist",
-  "version": "1.0.1",
+  "version": "1.0.2",
+  "homepage": "https://github.com/SonahtQ/FinalSkipList",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/SonahtQ/FinalSkipList.git"
+  },
+  "author": "Github users: @SonahtQ",
   "description": "Fast & fully-featured skip list data structure for JavaScript and TypeScript.",
   "exports": {
     "import": "./dist/import/index.js",
@@ -13,7 +19,6 @@
     "build": "npm run buildjs_browser && npm run buildjs_require && npm run buildjs_import",
     "test": "jest --passWithNoTests"
   },
-  "author": "",
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^29.5.1",
