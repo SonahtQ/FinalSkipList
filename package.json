@@ -1,6 +1,6 @@
 {
   "name": "finalskiplist",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fast & fully-featured skip list data structure for JavaScript and TypeScript.",
   "exports": {
     "import": "./dist/import/index.js",
