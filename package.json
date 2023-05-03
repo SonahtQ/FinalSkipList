@@ -1,0 +1,30 @@
+{
+  "name": "finalskiplist",
+  "version": "1.0.0",
+  "description": "Fast & fully-featured skip list data structure for JavaScript and TypeScript.",
+  "exports": {
+    "import": "./dist/import/index.js",
+    "require": "./dist/require/index.js"
+  },
+  "scripts": {
+    "buildjs_browser": "set NODE_ENV=production&&npx webpack",
+    "buildjs_require": "npx tsc --project ./tsconfig-require.json --declaration",
+    "buildjs_import": "npx tsc --project ./tsconfig-import.json --declaration",
+    "build": "npm run buildjs_browser && npm run buildjs_require && npm run buildjs_import",
+    "test": "jest --passWithNoTests"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.1",
+    "@types/node": "^18.16.3",
+    "@webpack-cli/generators": "^3.0.1",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "ts-loader": "^9.4.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.3",
+    "webpack": "^5.79.0",
+    "webpack-cli": "^5.0.1"
+  }
+}

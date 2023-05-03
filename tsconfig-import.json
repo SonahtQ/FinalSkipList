@@ -1,0 +1,21 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+
+    "compilerOptions": {
+        "moduleResolution": "nodenext",
+        
+        "baseUrl": "./",
+
+        "outDir": "dist/import",
+
+        "module": "ES2022",
+        "target": "ES2022",
+
+        "strict": true,
+
+        "esModuleInterop": true
+    },
+    "files": [
+        "./index.ts"
+    ]
+}
