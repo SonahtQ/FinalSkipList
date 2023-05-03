@@ -290,7 +290,7 @@ Calls callback for each value in skip list in ascending order of their scores.
 
 ```typescript
 mySkipList.forEach((value, score, rank) => {
-    console.log(value, score);
+    console.log(value, score, rank);
 });
 ```
 
@@ -300,7 +300,7 @@ Calls callback for each value in skip list in descending order of their scores.
 
 ```typescript
 mySkipList.forEachBackward((value, score, rank) => {
-    console.log(value, score);
+    console.log(value, score, rank);
 });
 ```
 
@@ -309,8 +309,16 @@ mySkipList.forEachBackward((value, score, rank) => {
 `FinalSkipList` is iterable with a `for...of` loop, which returns [value,score,rank] tuples in ascending order of their scores.
 
 ```typescript
-for (const [value, score] of mySkipList) {
-  console.log(value, score);
+for (const [value, score, rank] of mySkipList) {
+  console.log(value, scor, rank);
+}
+```
+
+You can also iterate in descending order of scores by:
+
+```typescript
+for (const [value, score, rank] of mySkipList.backward()) {
+  console.log(value, score, rank);
 }
 ```
 

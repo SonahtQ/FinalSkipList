@@ -900,7 +900,7 @@ export default class FinalSkipList<T> {
         }
     }
 
-    *backward() {
+    public *backward() {
         // Zaczynamy od ostatniego elementu na najniższym poziomie
         const pointer = new Pointer(this.#tail, -1);
 
