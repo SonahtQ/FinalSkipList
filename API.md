@@ -44,7 +44,7 @@ const someSkipList = FinalSkipList.from({
 ### `insert(value, score, [fromTail])`
 `average O(log(N))`
 
-Inserts a new `value` with a given `score`. Duplicate scores and values are allowed.
+Inserts a new `value` with a given `score`. Duplicated scores and values are allowed.
 
 When `fromTail` (default: false) is set to `true`, then inserting process proceeds from tail instead from head of skiplist. It'll be slightly faster when You are sure that with provided `score` it should land somewhere in second half of skiplist.
 
@@ -198,7 +198,7 @@ console.log(mySkipList.getRank("B", 20, 30, true)); // [[1, 20]]
 ### `getByRank(rank, [fullResult, [fromTail]])`
 `average O(log(N))`
 
-Returns value of given rank. Negative rank leads to indexing from the end. When `fullResult` specified as `true`, then returns [value, score, rank]` tuple.
+Returns value of given rank. Negative rank leads to indexing from the end. When `fullResult` specified as `true`, then returns `{value, score, rank}` object.
 
 When `fromTail` (default: false) is set to `true`, then `rank` calculate process proceeds from tail instead from head of skiplist. It'll be slightly faster when You are sure that `rank` is somewhere in second half of skiplist.
 
@@ -222,7 +222,7 @@ console.log(mySkipList.getByRank(-2,-1)); // ['E', 'F']
 ### `getByScore(score, [fullResult, [fromTail]])`
 `average O(log(N)+M) - where M is the number of values with same score`
 
-Returns an array of values with a given score. When `fullResult` specified as `true`, then returns array of tuples `[value, score, rank]`.
+Returns an array of values with a given score. When `fullResult` specified as `true`, then returns array of `{value, score, rank}` objects.
 
 When `fromTail` (default: false) is set to `true`, then searching proceeds from tail instead from head of skiplist. It'll be slightly faster when You are sure that `score` is somewhere in second half of skiplist.
 
@@ -233,7 +233,7 @@ console.log(mySkipList.getByScore(20)); // ['B']
 ### `getByScore(minScore, maxScore, [fullResult, [fromTail]])`
 `average O(log(N)+M) - where M is the number of values between inclusively minScore & maxScore`
 
-Returns an array of values within given score range.  When `fullResult` specified as `true`, then returns array of tuples `[value, score, rank]`.
+Returns an array of values within given score range.  When `fullResult` specified as `true`, then returns array of `{value, score, rank}` objects.
 
 When `fromTail` (default: false) is set to `true`, then searching proceeds from tail instead from head of skiplist. It'll be slightly faster when You are sure that `minScore` is somewhere in second half of skiplist.
 
@@ -306,7 +306,7 @@ mySkipList.forEachBackward((value, score, rank) => {
 
 ### `for...of`
 
-`FinalSkipList` is iterable with a `for...of` loop, which returns [value,score] tuples in ascending order of their scores.
+`FinalSkipList` is iterable with a `for...of` loop, which returns [value,score,rank] tuples in ascending order of their scores.
 
 ```typescript
 for (const [value, score] of mySkipList) {
