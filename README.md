@@ -58,8 +58,8 @@ mySkipList.deleteByScore(30); // ['C']
 
 ## API
 
-For a detailed API documentation and examples, check out the [API.md](./API.md) file.
+For a detailed API documentation and examples, check out the [API.md](https://github.com/SonahtQ/FinalSkipList/blob/main/API.md) file.
 
 ## License
 
-FinalSkipList is licensed under the [MIT License](./LICENSE).
+FinalSkipList is licensed under the [MIT License](https://github.com/SonahtQ/FinalSkipList/blob/main/LICENSE).
